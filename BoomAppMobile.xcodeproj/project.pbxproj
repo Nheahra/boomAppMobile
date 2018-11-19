@@ -18,6 +18,7 @@
 		875EA34621A32C48005D686E /* Tournament_FlatFilePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA34521A32C48005D686E /* Tournament_FlatFilePersistence.swift */; };
 		875EA34921A32E7A005D686E /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA34821A32E7A005D686E /* SpinnerView.swift */; };
 		875EA34B21A3324C005D686E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA34A21A3324C005D686E /* UIViewExtension.swift */; };
+		875EA34E21A33F27005D686E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 875EA34D21A33F27005D686E /* .gitignore */; };
 		87AFE11E2190F18D0012AF30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AFE11D2190F18D0012AF30 /* AppDelegate.swift */; };
 		87AFE1202190F18D0012AF30 /* CreateTournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AFE11F2190F18D0012AF30 /* CreateTournamentViewController.swift */; };
 		87AFE1232190F18D0012AF30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87AFE1212190F18D0012AF30 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		875EA34521A32C48005D686E /* Tournament_FlatFilePersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament_FlatFilePersistence.swift; sourceTree = "<group>"; };
 		875EA34821A32E7A005D686E /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		875EA34A21A3324C005D686E /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		875EA34D21A33F27005D686E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		87AFE11A2190F18D0012AF30 /* BoomAppMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomAppMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87AFE11D2190F18D0012AF30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87AFE11F2190F18D0012AF30 /* CreateTournamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTournamentViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		875EA34C21A33F09005D686E /* Git */ = {
+			isa = PBXGroup;
+			children = (
+				875EA34D21A33F27005D686E /* .gitignore */,
+			);
+			path = Git;
+			sourceTree = "<group>";
+		};
 		87AFE1112190F18D0012AF30 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +149,7 @@
 		87AFE11C2190F18D0012AF30 /* BoomAppMobile */ = {
 			isa = PBXGroup;
 			children = (
+				875EA34C21A33F09005D686E /* Git */,
 				875EA34721A32E4F005D686E /* Utility */,
 				875EA33721A31EA9005D686E /* Models */,
 				875EA3342193B77A005D686E /* Controllers */,
@@ -242,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				875EA34E21A33F27005D686E /* .gitignore in Resources */,
 				87AFE1282190F1900012AF30 /* LaunchScreen.storyboard in Resources */,
 				87AFE1252190F1900012AF30 /* Assets.xcassets in Resources */,
 				87AFE1232190F18D0012AF30 /* Main.storyboard in Resources */,
