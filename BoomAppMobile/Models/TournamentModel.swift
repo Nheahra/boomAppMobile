@@ -81,11 +81,15 @@ class TournamentModel {
         var tournaments = self.tournaments
         for searchItem in searchItems {
             tournaments = tournaments.filter {
-                //make the searches
+                let nameContainsSearchText = $0.tournamentName.lowercased().contains(searchItem)
+                return nameContainsSearchText
             }
         }
         filteredTournaments = tournaments
         self.delegate?.dataUpdated()
     }
     //actual sort tournament code here
+    private func sortTournaments() {
+        
+    }
 }

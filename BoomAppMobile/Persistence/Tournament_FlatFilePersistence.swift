@@ -12,7 +12,7 @@ class Tournament_FlatFilePersistence: FlatFilePersistence {
     init(_ type: PersistenceType) {
         super.init(type, _fileName: "Tournaments")
         if !FileManager.default.fileExists(atPath: fileURL.path) {
-            let packagedTournamentsUrl = Bundle.main.url(forResource: "Tournaments", withExtension: "json")!
+            guard let packagedTournamentsUrl = Bundle.main.url(forResource: "Tournaments", withExtension: "json") else { return }
             try! FileManager.default.copyItem(at: packagedTournamentsUrl, to: fileURL)
         }
     }

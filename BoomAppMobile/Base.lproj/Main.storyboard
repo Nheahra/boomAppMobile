@@ -170,21 +170,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NC3-tD-DVP" firstAttribute="top" secondItem="giC-OX-Ul0" secondAttribute="top" id="DrO-v3-bhQ"/>
                             <constraint firstAttribute="trailing" secondItem="NC3-tD-DVP" secondAttribute="trailing" id="Mq5-I0-6Sg"/>
                             <constraint firstItem="NC3-tD-DVP" firstAttribute="top" secondItem="giC-OX-Ul0" secondAttribute="top" id="SSv-YD-Fgq"/>
                             <constraint firstItem="NC3-tD-DVP" firstAttribute="leading" secondItem="giC-OX-Ul0" secondAttribute="leading" id="rci-Bz-bku"/>
+                            <constraint firstItem="O6x-g6-Ufi" firstAttribute="bottom" secondItem="NC3-tD-DVP" secondAttribute="bottom" id="sor-CU-3hd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O6x-g6-Ufi"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p31-sj-1BN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1918" y="-490"/>
         </scene>
         <!--Tournaments-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DisplayTournamentViewController" customModule="BoomAppMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CenterViewController" id="BYZ-38-t0r" customClass="CenterViewController" customModule="BoomAppMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,7 +195,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="114" id="yXd-si-WsW" customClass="TournamentCell" customModule="BoomAppMobile" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tournamentCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tournamentCell" rowHeight="114" id="yXd-si-WsW" customClass="TournamentCell" customModule="BoomAppMobile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yXd-si-WsW" id="O2l-to-9H4">
@@ -230,9 +232,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="tournamentDateLabel" destination="Gta-ae-btT" id="zOV-A4-AdG"/>
-                                            <outlet property="tournamentGoingLabel" destination="8H1-hL-G4K" id="h9T-JU-o5a"/>
-                                            <outlet property="tournamentNameLabel" destination="hdc-VK-tAz" id="8Ys-Kj-CX0"/>
+                                            <outlet property="tournamentDateLabel" destination="Gta-ae-btT" id="eKP-aC-zql"/>
+                                            <outlet property="tournamentGoingLabel" destination="8H1-hL-G4K" id="Lgx-0f-cw6"/>
+                                            <outlet property="tournamentNameLabel" destination="hdc-VK-tAz" id="Y1o-sh-mA5"/>
+                                            <segue destination="j2T-L3-yPo" kind="show" identifier="tournamentDetails" id="gcB-Mh-IB5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -248,13 +251,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tournaments" id="rhd-Cy-lTh">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Gp7-vM-sNl"/>
-                        <barButtonItem key="rightBarButtonItem" title="Login" id="Gwz-k8-Opg"/>
+                        <barButtonItem key="leftBarButtonItem" image="Hamburger" id="Gp7-vM-sNl">
+                            <connections>
+                                <action selector="menuTapped:" destination="BYZ-38-t0r" id="bQG-52-VW9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="Gwz-k8-Opg">
+                            <connections>
+                                <action selector="sortTapped:" destination="BYZ-38-t0r" id="sA4-0W-Ffp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="TournamentDisplayView" destination="huO-8V-xgf" id="o5d-84-MjV"/>
                         <outlet property="rainDate" destination="JLf-0A-8FI" id="rla-Xr-ea1"/>
                         <outlet property="states" destination="eu5-BD-9JG" id="hnA-8z-utN"/>
+                        <outlet property="tableView" destination="huO-8V-xgf" id="nhc-dG-SDq"/>
                         <outlet property="tournamentAddress" destination="3J6-82-2mL" id="4vH-6R-GpL"/>
                         <outlet property="tournamentCity" destination="Q40-Jk-oQD" id="NKX-Zh-7Vq"/>
                         <outlet property="tournamentName" destination="qBa-QW-gOr" id="gCR-Gr-tii"/>
@@ -264,6 +275,210 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.2" y="133.5832083958021"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="sIH-Th-8BN">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="d7X-Zn-5eg" userLabel="Menu View Controller" customClass="SidePanelViewController" customModule="BoomAppMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BVs-Tn-7zy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVB-DC-ucA">
+                                <rect key="frame" x="0.0" y="20" width="225" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="kuY-kP-3ol"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="13O-j0-wyI">
+                                <rect key="frame" x="0.0" y="90" width="225" height="577"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="69" id="xZc-LP-efu" customClass="MenuCell" customModule="BoomAppMobile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="225" height="69"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xZc-LP-efu" id="zeu-cy-I2d">
+                                            <rect key="frame" x="0.0" y="0.0" width="192" height="68.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaD-Bh-Fci">
+                                                    <rect key="frame" x="15" y="24" width="99" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iaD-Bh-Fci" firstAttribute="top" secondItem="zeu-cy-I2d" secondAttribute="topMargin" constant="13" id="3Fg-br-wqg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="iaD-Bh-Fci" secondAttribute="bottom" constant="13" id="3HF-MC-NP7"/>
+                                                <constraint firstItem="iaD-Bh-Fci" firstAttribute="leading" secondItem="zeu-cy-I2d" secondAttribute="leadingMargin" id="ZJm-SS-nQB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuOption" destination="iaD-Bh-Fci" id="MWs-y5-NOE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="d7X-Zn-5eg" id="JUs-xX-ki0"/>
+                                    <outlet property="delegate" destination="d7X-Zn-5eg" id="cdR-gi-wl2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="13O-j0-wyI" firstAttribute="bottom" secondItem="MR2-jM-JR9" secondAttribute="bottom" id="1Gq-j7-cU4"/>
+                            <constraint firstItem="13O-j0-wyI" firstAttribute="leading" secondItem="MR2-jM-JR9" secondAttribute="leading" id="1yK-IQ-Kxh"/>
+                            <constraint firstItem="13O-j0-wyI" firstAttribute="top" secondItem="MVB-DC-ucA" secondAttribute="bottom" id="b04-yY-cq7"/>
+                            <constraint firstItem="MR2-jM-JR9" firstAttribute="trailing" secondItem="13O-j0-wyI" secondAttribute="trailing" constant="150" id="bPc-D7-dQd"/>
+                            <constraint firstItem="MVB-DC-ucA" firstAttribute="top" secondItem="MR2-jM-JR9" secondAttribute="top" id="jPf-eN-pqH"/>
+                            <constraint firstItem="MR2-jM-JR9" firstAttribute="trailing" secondItem="MVB-DC-ucA" secondAttribute="trailing" constant="150" id="rzV-Ma-VjE"/>
+                            <constraint firstItem="13O-j0-wyI" firstAttribute="top" secondItem="MVB-DC-ucA" secondAttribute="bottom" id="tCr-qF-QoQ"/>
+                            <constraint firstItem="MVB-DC-ucA" firstAttribute="leading" secondItem="MR2-jM-JR9" secondAttribute="leading" id="vCf-K9-FvH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MR2-jM-JR9"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="13O-j0-wyI" id="B21-5e-sDO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZmK-4O-hfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773.60000000000002" y="794.75262368815595"/>
+        </scene>
+        <!--Sort View Controller-->
+        <scene sceneID="GTv-LA-2lN">
+            <objects>
+                <viewController storyboardIdentifier="SortViewController" id="DZ1-dO-NSg" userLabel="Sort View Controller" customClass="SidePanelViewController" customModule="BoomAppMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qfj-jR-LpJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SK2-mT-UOp">
+                                <rect key="frame" x="150" y="90" width="225" height="577"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="69" id="PZa-BR-k4s" customClass="MenuCell" customModule="BoomAppMobile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="225" height="69"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PZa-BR-k4s" id="Fb4-LN-Lww">
+                                            <rect key="frame" x="0.0" y="0.0" width="186" height="68.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg9-Oc-ZnK">
+                                                    <rect key="frame" x="189" y="24" width="99" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dg9-Oc-ZnK" secondAttribute="bottom" constant="13" id="dMv-wB-DCQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dg9-Oc-ZnK" secondAttribute="trailing" constant="40" id="rsZ-NF-hf5"/>
+                                                <constraint firstItem="dg9-Oc-ZnK" firstAttribute="top" secondItem="Fb4-LN-Lww" secondAttribute="topMargin" constant="13" id="ujC-ca-oEI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuOption" destination="dg9-Oc-ZnK" id="xPj-RW-SvV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DZ1-dO-NSg" id="DcN-iN-lU8"/>
+                                    <outlet property="delegate" destination="DZ1-dO-NSg" id="hfu-tp-dzF"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort By:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdL-J7-gX8">
+                                <rect key="frame" x="150" y="20" width="225" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ueY-xd-rNv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SK2-mT-UOp" firstAttribute="bottom" secondItem="7O1-LW-UIw" secondAttribute="bottom" id="5iV-rw-BaQ"/>
+                            <constraint firstItem="SK2-mT-UOp" firstAttribute="leading" secondItem="7O1-LW-UIw" secondAttribute="leading" constant="150" id="Ebl-Bt-Ldy"/>
+                            <constraint firstItem="XdL-J7-gX8" firstAttribute="top" secondItem="7O1-LW-UIw" secondAttribute="top" id="LVh-q3-JLb"/>
+                            <constraint firstItem="SK2-mT-UOp" firstAttribute="trailing" secondItem="7O1-LW-UIw" secondAttribute="trailing" id="MLO-q2-Dxu"/>
+                            <constraint firstItem="SK2-mT-UOp" firstAttribute="top" secondItem="XdL-J7-gX8" secondAttribute="bottom" id="Rsr-lr-cW3"/>
+                            <constraint firstItem="XdL-J7-gX8" firstAttribute="trailing" secondItem="7O1-LW-UIw" secondAttribute="trailing" id="hIW-f6-y24"/>
+                            <constraint firstItem="XdL-J7-gX8" firstAttribute="leading" secondItem="7O1-LW-UIw" secondAttribute="leading" constant="150" id="lCE-eU-Nhu"/>
+                            <constraint firstItem="SK2-mT-UOp" firstAttribute="top" secondItem="XdL-J7-gX8" secondAttribute="bottom" id="vug-wv-YhY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7O1-LW-UIw"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="SK2-mT-UOp" id="Aic-09-Fjl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LE8-eC-lkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1405.5999999999999" y="794.75262368815595"/>
+        </scene>
+        <!--Tournament Details View Controller-->
+        <scene sceneID="cdL-t0-2tB">
+            <objects>
+                <viewController id="j2T-L3-yPo" customClass="TournamentDetailsViewController" customModule="BoomAppMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8EO-95-BTb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tournament Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tow-5G-PBd">
+                                <rect key="frame" x="116.5" y="84" width="142" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ff6-3k-VZf">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oyY-p0-H7B">
+                                <rect key="frame" x="119.5" y="523" width="136" height="44"/>
+                                <color key="backgroundColor" red="0.1725192309839938" green="0.5629655116580311" blue="0.1719356691117003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" title="Registered">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RKW-cd-jaJ">
+                                <rect key="frame" x="74" y="125" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ff6-3k-VZf" firstAttribute="centerX" secondItem="8EO-95-BTb" secondAttribute="centerX" id="F3s-Uf-u1u"/>
+                            <constraint firstItem="tow-5G-PBd" firstAttribute="centerX" secondItem="8EO-95-BTb" secondAttribute="centerX" id="HKG-8f-A1D"/>
+                            <constraint firstItem="RKW-cd-jaJ" firstAttribute="top" secondItem="tow-5G-PBd" secondAttribute="bottom" constant="20" id="Mdq-mV-DpT"/>
+                            <constraint firstItem="RKW-cd-jaJ" firstAttribute="centerX" secondItem="8EO-95-BTb" secondAttribute="centerX" id="PAh-W3-LFU"/>
+                            <constraint firstItem="tow-5G-PBd" firstAttribute="top" secondItem="JBA-mh-HdP" secondAttribute="top" constant="20" id="UUN-gL-c9M"/>
+                            <constraint firstItem="oyY-p0-H7B" firstAttribute="centerX" secondItem="8EO-95-BTb" secondAttribute="centerX" id="Vdd-uw-wUH"/>
+                            <constraint firstItem="ff6-3k-VZf" firstAttribute="top" secondItem="RKW-cd-jaJ" secondAttribute="bottom" constant="20" id="loC-Nf-W26"/>
+                            <constraint firstItem="ff6-3k-VZf" firstAttribute="top" secondItem="RKW-cd-jaJ" secondAttribute="bottom" constant="20" id="mKJ-iv-4Nf"/>
+                            <constraint firstItem="JBA-mh-HdP" firstAttribute="bottom" secondItem="oyY-p0-H7B" secondAttribute="bottom" constant="100" id="yYV-pE-glA"/>
+                            <constraint firstItem="RKW-cd-jaJ" firstAttribute="top" secondItem="tow-5G-PBd" secondAttribute="bottom" constant="20" id="zj1-1j-kbu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JBA-mh-HdP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUT-gs-8jc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2105" y="382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bKg-VT-6xR">
@@ -284,4 +499,7 @@
             <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hamburger" width="24" height="24"/>
+    </resources>
 </document>

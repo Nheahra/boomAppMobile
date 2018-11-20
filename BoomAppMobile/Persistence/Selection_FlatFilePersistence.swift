@@ -12,7 +12,7 @@ class Selection_FlatFilePersistence: FlatFilePersistence {
     init(_ type: PersistenceType) {
         super.init(type, _fileName: "Selections")
         if !FileManager.default.fileExists(atPath: fileURL.path){
-            let packagedSelectionsUrl = Bundle.main.url(forResource: "Selections", withExtension: "json")!
+            guard let packagedSelectionsUrl = Bundle.main.url(forResource: "Selections", withExtension: "json") else { return }
             try! FileManager.default.copyItem(at: packagedSelectionsUrl, to: fileURL)
         }
     }
