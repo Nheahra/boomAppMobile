@@ -16,11 +16,11 @@ struct MenuOption {
         self.option = option
     }
     
-    static func menuOptions() -> [MenuOption] {
+    static func homeOptions() -> [MenuOption] {
         return [
-            MenuOption(option: "Login"),
-            MenuOption(option: "Tournaments"),
-            MenuOption(option: "Score")
+            MenuOption(option: "My Tournaments"),
+            MenuOption(option: "All Tournaments"),
+            MenuOption(option: "Create A Tournament")
         ]
     }
     static func sortOptions() -> [MenuOption] {

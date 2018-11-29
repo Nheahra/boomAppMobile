@@ -14,7 +14,6 @@ class CenterViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var menuCell = MenuCell()
     
-    @IBAction func menuTapped(_ sender: Any) { delegate?.toggleMenu?() }
     @IBAction func sortTapped(_ sender: Any) { delegate?.toggleSort?() }
     
     //private let model = TournamentModel()

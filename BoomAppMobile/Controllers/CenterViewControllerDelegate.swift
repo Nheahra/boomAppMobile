@@ -10,7 +10,6 @@ import UIKit
 
 @objc
 protocol CenterViewControllerDelegate {
-    @objc optional func toggleMenu()
     @objc optional func toggleSort()
     @objc optional func collapsePanels()
 }

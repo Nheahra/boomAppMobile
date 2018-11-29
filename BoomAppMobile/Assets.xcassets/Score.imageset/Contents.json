@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-menu-30.png",
+      "filename" : "icons8-scorecard-30.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-menu-60.png",
+      "filename" : "icons8-scorecard-60.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-menu-90.png",
+      "filename" : "icons8-scorecard-90.png",
       "scale" : "3x"
     }
   ],
