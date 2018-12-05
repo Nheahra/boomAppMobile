@@ -11,5 +11,4 @@ import UIKit
 class TournamentCell: UITableViewCell {
     @IBOutlet weak var tournamentNameLabel: UILabel!
     @IBOutlet weak var tournamentDateLabel: UILabel!
-    @IBOutlet weak var tournamentGoingLabel: UILabel!
 }

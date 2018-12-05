@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8758E7A421B7307500D282B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758E7A321B7307500D282B2 /* LoginViewController.swift */; };
+		8758E7A621B735CB00D282B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8758E7A521B735CB00D282B2 /* HomeViewController.swift */; };
 		875EA3332193B76D005D686E /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA3322193B76D005D686E /* CenterViewController.swift */; };
 		875EA3362193C0B7005D686E /* APIConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA3352193C0B7005D686E /* APIConnect.swift */; };
 		875EA33921A31ED5005D686E /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA33821A31ED5005D686E /* Tournament.swift */; };
@@ -19,8 +21,6 @@
 		875EA34921A32E7A005D686E /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA34821A32E7A005D686E /* SpinnerView.swift */; };
 		875EA34B21A3324C005D686E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA34A21A3324C005D686E /* UIViewExtension.swift */; };
 		875EA34E21A33F27005D686E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 875EA34D21A33F27005D686E /* .gitignore */; };
-		875EA35021A34109005D686E /* TournamentDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA34F21A34109005D686E /* TournamentDetailsController.swift */; };
-		875EA35221A35DAF005D686E /* SortOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA35121A35DAF005D686E /* SortOptionsViewController.swift */; };
 		875EA35421A46B02005D686E /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA35321A46B02005D686E /* SidePanelViewController.swift */; };
 		875EA35621A476C4005D686E /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA35521A476C4005D686E /* MenuOption.swift */; };
 		875EA35821A477FE005D686E /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA35721A477FE005D686E /* MenuCell.swift */; };
@@ -28,6 +28,8 @@
 		875EA35C21A479C5005D686E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA35B21A479C5005D686E /* ContainerViewController.swift */; };
 		875EA35E21A48BEF005D686E /* CenterViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA35D21A48BEF005D686E /* CenterViewControllerDelegate.swift */; };
 		875EA36221A49735005D686E /* TournamentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA36121A49735005D686E /* TournamentCell.swift */; };
+		878B7CE421B5AB67001ACD98 /* TournamentMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B7CE321B5AB67001ACD98 /* TournamentMasterTableViewController.swift */; };
+		878B7CE621B5B633001ACD98 /* TournamentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B7CE521B5B633001ACD98 /* TournamentDetailsViewController.swift */; };
 		87AFE11E2190F18D0012AF30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AFE11D2190F18D0012AF30 /* AppDelegate.swift */; };
 		87AFE1202190F18D0012AF30 /* CreateTournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AFE11F2190F18D0012AF30 /* CreateTournamentViewController.swift */; };
 		87AFE1232190F18D0012AF30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87AFE1212190F18D0012AF30 /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8758E7A321B7307500D282B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8758E7A521B735CB00D282B2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		875EA3322193B76D005D686E /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		875EA3352193C0B7005D686E /* APIConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConnect.swift; sourceTree = "<group>"; };
 		875EA33821A31ED5005D686E /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
@@ -59,8 +63,6 @@
 		875EA34821A32E7A005D686E /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		875EA34A21A3324C005D686E /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		875EA34D21A33F27005D686E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		875EA34F21A34109005D686E /* TournamentDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentDetailsController.swift; sourceTree = "<group>"; };
-		875EA35121A35DAF005D686E /* SortOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOptionsViewController.swift; sourceTree = "<group>"; };
 		875EA35321A46B02005D686E /* SidePanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
 		875EA35521A476C4005D686E /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
 		875EA35721A477FE005D686E /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
@@ -68,6 +70,8 @@
 		875EA35B21A479C5005D686E /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		875EA35D21A48BEF005D686E /* CenterViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewControllerDelegate.swift; sourceTree = "<group>"; };
 		875EA36121A49735005D686E /* TournamentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentCell.swift; sourceTree = "<group>"; };
+		878B7CE321B5AB67001ACD98 /* TournamentMasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentMasterTableViewController.swift; sourceTree = "<group>"; };
+		878B7CE521B5B633001ACD98 /* TournamentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentDetailsViewController.swift; sourceTree = "<group>"; };
 		87AFE11A2190F18D0012AF30 /* BoomAppMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomAppMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87AFE11D2190F18D0012AF30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87AFE11F2190F18D0012AF30 /* CreateTournamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTournamentViewController.swift; sourceTree = "<group>"; };
@@ -107,8 +111,10 @@
 				875EA35321A46B02005D686E /* SidePanelViewController.swift */,
 				875EA35921A4789A005D686E /* SidePanelViewControllerDelegate.swift */,
 				87AFE11F2190F18D0012AF30 /* CreateTournamentViewController.swift */,
-				875EA34F21A34109005D686E /* TournamentDetailsController.swift */,
-				875EA35121A35DAF005D686E /* SortOptionsViewController.swift */,
+				878B7CE321B5AB67001ACD98 /* TournamentMasterTableViewController.swift */,
+				878B7CE521B5B633001ACD98 /* TournamentDetailsViewController.swift */,
+				8758E7A321B7307500D282B2 /* LoginViewController.swift */,
+				8758E7A521B735CB00D282B2 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -303,15 +309,17 @@
 			files = (
 				875EA34221A328E9005D686E /* FlatFilePersistence.swift in Sources */,
 				875EA33D21A327C9005D686E /* SortSelection.swift in Sources */,
+				878B7CE421B5AB67001ACD98 /* TournamentMasterTableViewController.swift in Sources */,
+				8758E7A421B7307500D282B2 /* LoginViewController.swift in Sources */,
+				878B7CE621B5B633001ACD98 /* TournamentDetailsViewController.swift in Sources */,
 				875EA35C21A479C5005D686E /* ContainerViewController.swift in Sources */,
 				875EA35821A477FE005D686E /* MenuCell.swift in Sources */,
 				875EA36221A49735005D686E /* TournamentCell.swift in Sources */,
 				875EA3332193B76D005D686E /* CenterViewController.swift in Sources */,
-				875EA35021A34109005D686E /* TournamentDetailsController.swift in Sources */,
 				87AFE1202190F18D0012AF30 /* CreateTournamentViewController.swift in Sources */,
 				87AFE11E2190F18D0012AF30 /* AppDelegate.swift in Sources */,
+				8758E7A621B735CB00D282B2 /* HomeViewController.swift in Sources */,
 				875EA33F21A32807005D686E /* SortOption.swift in Sources */,
-				875EA35221A35DAF005D686E /* SortOptionsViewController.swift in Sources */,
 				875EA3362193C0B7005D686E /* APIConnect.swift in Sources */,
 				875EA34621A32C48005D686E /* Tournament_FlatFilePersistence.swift in Sources */,
 				875EA34421A32AF6005D686E /* Selection_FlatFilePersistence.swift in Sources */,
