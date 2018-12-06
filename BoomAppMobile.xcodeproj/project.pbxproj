@@ -102,7 +102,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		875EA3342193B77A005D686E /* Controllers */ = {
+		8758E7A721B8849300D282B2 /* Unused */ = {
 			isa = PBXGroup;
 			children = (
 				875EA35B21A479C5005D686E /* ContainerViewController.swift */,
@@ -110,6 +110,14 @@
 				875EA35D21A48BEF005D686E /* CenterViewControllerDelegate.swift */,
 				875EA35321A46B02005D686E /* SidePanelViewController.swift */,
 				875EA35921A4789A005D686E /* SidePanelViewControllerDelegate.swift */,
+			);
+			path = Unused;
+			sourceTree = "<group>";
+		};
+		875EA3342193B77A005D686E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8758E7A721B8849300D282B2 /* Unused */,
 				87AFE11F2190F18D0012AF30 /* CreateTournamentViewController.swift */,
 				878B7CE321B5AB67001ACD98 /* TournamentMasterTableViewController.swift */,
 				878B7CE521B5B633001ACD98 /* TournamentDetailsViewController.swift */,
