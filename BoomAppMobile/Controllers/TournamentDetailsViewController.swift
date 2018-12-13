@@ -12,27 +12,23 @@ import MapKit
 class TournamentDetailsViewController: UIViewController {
 
     @IBOutlet weak var tournamentNameLabel: UILabel!
-    @IBOutlet weak var tournamentAddressTextView: UITextView!
+    @IBOutlet weak var tournamentStartDate: UILabel!
+    @IBOutlet weak var tournamentAddressLabel: UILabel!
+    @IBOutlet weak var tournamentCityStateLabel: UILabel!
     @IBOutlet weak var tournamentMapView: MKMapView!
     @IBOutlet weak var registeredButton: UIButton!
     
-    var tournament: Tournament? {
-        didSet {
-            refreshUI()
-        }
-    }
+    var tournament: Tournament?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    func refreshUI() {
-        loadViewIfNeeded()
-        tournamentNameLabel.text = tournament?.tournamentName
-        tournamentAddressTextView.text = "\(tournament?.address ??  "Address") \n\(tournament?.city ?? "City"), \(tournament?.state ?? "State")"
-        
+        guard let tournament = tournament else {
+            return
+        }
+        self.tournamentNameLabel.text = tournament.tournamentName
+        self.tournamentStartDate.text = "\(String(describing: tournament.startDate))"
+        self.tournamentAddressLabel.text = tournament.address
+        self.tournamentCityStateLabel.text = "\(tournament.city), \(tournament.state)"
     }
     
     /*

@@ -28,7 +28,7 @@
 		875EA35C21A479C5005D686E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA35B21A479C5005D686E /* ContainerViewController.swift */; };
 		875EA35E21A48BEF005D686E /* CenterViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA35D21A48BEF005D686E /* CenterViewControllerDelegate.swift */; };
 		875EA36221A49735005D686E /* TournamentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA36121A49735005D686E /* TournamentCell.swift */; };
-		878B7CE421B5AB67001ACD98 /* TournamentMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B7CE321B5AB67001ACD98 /* TournamentMasterTableViewController.swift */; };
+		878B7CE421B5AB67001ACD98 /* TournamentMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B7CE321B5AB67001ACD98 /* TournamentMasterViewController.swift */; };
 		878B7CE621B5B633001ACD98 /* TournamentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B7CE521B5B633001ACD98 /* TournamentDetailsViewController.swift */; };
 		87AFE11E2190F18D0012AF30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AFE11D2190F18D0012AF30 /* AppDelegate.swift */; };
 		87AFE1202190F18D0012AF30 /* CreateTournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AFE11F2190F18D0012AF30 /* CreateTournamentViewController.swift */; };
@@ -70,7 +70,7 @@
 		875EA35B21A479C5005D686E /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		875EA35D21A48BEF005D686E /* CenterViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewControllerDelegate.swift; sourceTree = "<group>"; };
 		875EA36121A49735005D686E /* TournamentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentCell.swift; sourceTree = "<group>"; };
-		878B7CE321B5AB67001ACD98 /* TournamentMasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentMasterTableViewController.swift; sourceTree = "<group>"; };
+		878B7CE321B5AB67001ACD98 /* TournamentMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentMasterViewController.swift; sourceTree = "<group>"; };
 		878B7CE521B5B633001ACD98 /* TournamentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentDetailsViewController.swift; sourceTree = "<group>"; };
 		87AFE11A2190F18D0012AF30 /* BoomAppMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomAppMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87AFE11D2190F18D0012AF30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			children = (
 				8758E7A721B8849300D282B2 /* Unused */,
 				87AFE11F2190F18D0012AF30 /* CreateTournamentViewController.swift */,
-				878B7CE321B5AB67001ACD98 /* TournamentMasterTableViewController.swift */,
+				878B7CE321B5AB67001ACD98 /* TournamentMasterViewController.swift */,
 				878B7CE521B5B633001ACD98 /* TournamentDetailsViewController.swift */,
 				8758E7A321B7307500D282B2 /* LoginViewController.swift */,
 				8758E7A521B735CB00D282B2 /* HomeViewController.swift */,
@@ -317,7 +317,7 @@
 			files = (
 				875EA34221A328E9005D686E /* FlatFilePersistence.swift in Sources */,
 				875EA33D21A327C9005D686E /* SortSelection.swift in Sources */,
-				878B7CE421B5AB67001ACD98 /* TournamentMasterTableViewController.swift in Sources */,
+				878B7CE421B5AB67001ACD98 /* TournamentMasterViewController.swift in Sources */,
 				8758E7A421B7307500D282B2 /* LoginViewController.swift in Sources */,
 				878B7CE621B5B633001ACD98 /* TournamentDetailsViewController.swift in Sources */,
 				875EA35C21A479C5005D686E /* ContainerViewController.swift in Sources */,

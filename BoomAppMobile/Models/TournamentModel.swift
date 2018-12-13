@@ -16,9 +16,10 @@ protocol TournamentModelDelegate: class {
 class TournamentModel {
     weak var delegate: TournamentModelDelegate?
     private(set) var selections: [SortSelection]
-    
     private let selectionPersistence: Selection_FlatFilePersistence
     private let tournamentPersistence: Tournament_FlatFilePersistence
+    
+    fileprivate var apiConnect = APIConnect()
     private var tournaments = [Tournament]()
     private var filteredTournaments = [Tournament]()
     private var selectedTournamentIndex = 0
@@ -33,7 +34,14 @@ class TournamentModel {
         
         SpinnerView.sharedInstance.show()
         concurrentQueue.async {[unowned self] in
-            self.tournaments = self.tournamentPersistence.tournaments
+            self.apiConnect.getTournaments (completion: { (tournaments) in
+                self.tournaments = tournaments
+                self.delegate?.dataUpdated()
+                print("closure stuff \(tournaments)")
+                
+            })
+            print("model print \(self.tournaments)")
+            //self.tournamentPersistence.tournaments
             self.sortTournaments()
             self.delegate?.dataUpdated()
             SpinnerView.sharedInstance.hide()

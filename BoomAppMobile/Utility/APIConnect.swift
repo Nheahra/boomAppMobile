@@ -26,11 +26,14 @@ class APIConnect {
                 do {
                     if let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.init(rawValue: 0)) as? JSON {
                         if let rows = json["rows"] as? [JSON] {
+                            var i: Int = 0
                             for row in rows {
-                                let tournament = Tournament(id: row["tournament_id"] as! Int, tournamentName: row["tournament_name"] as! String, locationName: row["location_name"] as! String, address: row["location_address"] as! String, city: row["location_city"] as! String, state: row["location_state"] as! String, startDate: row["tournament_start_date"] as! Date, rainDate: row["tournament_rain_date"] as! Date)
+                                let tournament = Tournament(id: row["tournament_id"] as? Int ?? i, tournamentName: row["tournament_name"] as? String ?? "Tournament Name Here", locationName: row["location_name"] as? String ?? "Location Name", address: row["location_address"] as? String ?? "Address", city: row["location_city"] as? String ?? "City", state: row["location_state"] as? String ?? "State", startDate: row["tournament_start_date"] as? Date ?? Date(), rainDate: row["tournament_rain_date"] as? Date ?? Date())
                                 TournamentArray.append(tournament)
+                                i += 1
                             }
                         }
+                        print ("TournamentArray: \(TournamentArray)")
                         completion(TournamentArray)
                     }
                 } catch let error {
@@ -40,5 +43,4 @@ class APIConnect {
         }
         task.resume()
     }
-    
 }
