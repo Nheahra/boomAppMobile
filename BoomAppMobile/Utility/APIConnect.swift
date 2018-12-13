@@ -12,6 +12,7 @@ class APIConnect {
     
     typealias JSON = [String : Any]
     typealias TournamentResponse = ([Tournament]) -> ()
+    typealias CreateTournamentResponse = (Tournament) -> ()
     
     func getTournaments(completion: @escaping TournamentResponse){
         var TournamentArray = [Tournament]()
@@ -33,8 +34,35 @@ class APIConnect {
                                 i += 1
                             }
                         }
-                        print ("TournamentArray: \(TournamentArray)")
                         completion(TournamentArray)
+                    }
+                } catch let error {
+                    print(error)
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    func createTournament(tournament: Tournament, completion: @escaping CreateTournamentResponse){
+        guard let url = URL.init(string: "https://sabrie.com:3000/tournaments") else
+        {
+            print("Create Tournament Failed.")
+            return
+        }
+        var request = URLRequest.init(url: url)
+        request.httpMethod = "POST"
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: tournament, options: .prettyPrinted)
+        } catch let error {
+            print(error)
+        }
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? JSON {
+                        print(json)
+                        completion(tournament)
                     }
                 } catch let error {
                     print(error)

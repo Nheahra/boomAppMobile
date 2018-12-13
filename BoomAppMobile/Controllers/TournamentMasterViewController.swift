@@ -21,11 +21,11 @@ class TournamentMasterViewController: UIViewController {
         model.delegate = self
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let tournamentViewController = segue.destination as? TournamentDetailsViewController {
-            tournamentViewController.tournament = model.selectedTournament
-        } else {
+        guard let tournamentViewController = segue.destination as? TournamentDetailsViewController
+        else {
             return
         }
+        tournamentViewController.tournament = model.selectedTournament
         super.prepare(for: segue, sender: sender)
     }
 }
@@ -50,7 +50,7 @@ extension TournamentMasterViewController: UITableViewDataSource {
 
 extension TournamentMasterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected Tournament row: \(indexPath)")
+        print("Selected Tournament row: \(indexPath.row)")
         model.tournamentSelected(at: indexPath.row)
         performSegue(withIdentifier: "TournamentDetailsSegue", sender: self)
     }

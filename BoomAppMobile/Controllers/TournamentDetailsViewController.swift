@@ -17,6 +17,7 @@ class TournamentDetailsViewController: UIViewController {
     @IBOutlet weak var tournamentCityStateLabel: UILabel!
     @IBOutlet weak var tournamentMapView: MKMapView!
     @IBOutlet weak var registeredButton: UIButton!
+    @IBOutlet weak var tournamentLocationNameLabel: UILabel!
     
     var tournament: Tournament?
     
@@ -27,10 +28,15 @@ class TournamentDetailsViewController: UIViewController {
         }
         self.tournamentNameLabel.text = tournament.tournamentName
         self.tournamentStartDate.text = "\(String(describing: tournament.startDate))"
+        self.tournamentLocationNameLabel.text = "\(tournament.locationName)"
         self.tournamentAddressLabel.text = tournament.address
         self.tournamentCityStateLabel.text = "\(tournament.city), \(tournament.state)"
     }
     
+    
+    @IBAction func debugMe(_ sender: Any) {
+        print("I'mma figure this out")
+    }
     /*
     // MARK: - Navigation
 

@@ -37,10 +37,7 @@ class TournamentModel {
             self.apiConnect.getTournaments (completion: { (tournaments) in
                 self.tournaments = tournaments
                 self.delegate?.dataUpdated()
-                print("closure stuff \(tournaments)")
-                
             })
-            print("model print \(self.tournaments)")
             //self.tournamentPersistence.tournaments
             self.sortTournaments()
             self.delegate?.dataUpdated()

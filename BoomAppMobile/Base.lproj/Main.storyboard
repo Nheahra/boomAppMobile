@@ -250,11 +250,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Vl7-bO-uVf"/>
-                                    <barButtonItem title="Tournaments" image="Score" landscapeImage="Score" largeContentSizeImage="Score" id="zl3-gb-2uj">
-                                        <connections>
-                                            <segue destination="BIU-Xy-ysM" kind="presentation" animates="NO" id="jVa-3J-kEr"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem title="Tournaments" image="Score" landscapeImage="Score" largeContentSizeImage="Score" id="zl3-gb-2uj"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="wqi-um-WQS"/>
                                     <barButtonItem systemItem="add" id="RcL-se-b1v"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="8Yf-Pf-K7H"/>
@@ -314,13 +310,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="kdr-vw-tPE">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7L-XM-gia">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Zqq-OM-zPU">
-                                                <rect key="frame" x="67.5" y="0.0" width="240" height="149"/>
+                                                <rect key="frame" x="67.5" y="0.0" width="240" height="180.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tournament Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4W-Gn-wlM">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="55"/>
@@ -337,14 +333,20 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbL-RM-oIX">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEh-5J-PfJ" userLabel="Tournament Location Name">
                                                         <rect key="frame" x="0.0" y="86.5" width="240" height="31"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryK-5L-r2D">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbL-RM-oIX">
                                                         <rect key="frame" x="0.0" y="117.5" width="240" height="31.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryK-5L-r2D">
+                                                        <rect key="frame" x="0.0" y="149" width="240" height="31.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -355,18 +357,21 @@
                                                 </constraints>
                                             </stackView>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-Fj-BZE">
-                                                <rect key="frame" x="67.5" y="164" width="240" height="240"/>
+                                                <rect key="frame" x="67.5" y="195.5" width="240" height="240"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="240" id="5ty-EB-fgh"/>
                                                     <constraint firstAttribute="height" constant="240" id="cYw-Ob-c8S"/>
                                                 </constraints>
                                             </mapView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uwy-CN-CBu">
-                                                <rect key="frame" x="108" y="424" width="159" height="75"/>
+                                                <rect key="frame" x="108" y="455.5" width="159" height="75"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Des-AM-oUG">
                                                         <rect key="frame" x="0.0" y="0.0" width="159" height="30"/>
                                                         <state key="normal" title="Registered"/>
+                                                        <connections>
+                                                            <action selector="debugMe:" destination="Hbq-uM-TvS" eventType="touchUpInside" id="GXz-6U-9zp"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHQ-oX-guF">
                                                         <rect key="frame" x="0.0" y="45" width="159" height="30"/>
@@ -410,6 +415,7 @@
                         <outlet property="registeredButton" destination="Des-AM-oUG" id="l6w-G5-EeA"/>
                         <outlet property="tournamentAddressLabel" destination="UbL-RM-oIX" id="Tb6-xv-7C4"/>
                         <outlet property="tournamentCityStateLabel" destination="ryK-5L-r2D" id="xHE-9Z-DXI"/>
+                        <outlet property="tournamentLocationNameLabel" destination="qEh-5J-PfJ" id="P7O-vn-wcA"/>
                         <outlet property="tournamentMapView" destination="t8N-Fj-BZE" id="6YS-jf-qSo"/>
                         <outlet property="tournamentNameLabel" destination="U4W-Gn-wlM" id="lF9-Om-DKf"/>
                         <outlet property="tournamentStartDate" destination="QMY-hZ-98c" id="OLz-xh-odh"/>
@@ -545,37 +551,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4j-vz-g0S">
-                                <rect key="frame" x="55" y="237" width="265" height="30"/>
+                                <rect key="frame" x="55" y="281" width="265" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sNH-cU-LeY">
-                                <rect key="frame" x="55" y="308" width="265" height="30"/>
+                                <rect key="frame" x="55" y="352" width="265" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apl-eO-Sjf">
-                                <rect key="frame" x="84" y="90" width="207" height="46"/>
+                                <rect key="frame" x="84" y="134" width="207" height="46"/>
                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF5-pT-fpx">
-                                <rect key="frame" x="55" y="206" width="47" height="21"/>
+                                <rect key="frame" x="55" y="250" width="47" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1z-W2-bbe">
-                                <rect key="frame" x="55" y="277" width="80" height="21"/>
+                                <rect key="frame" x="55" y="321" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beG-4k-E6d">
-                                <rect key="frame" x="142" y="368" width="91" height="40"/>
+                                <rect key="frame" x="142" y="412" width="91" height="40"/>
                                 <color key="backgroundColor" red="0.89472691969550333" green="0.89472691969550333" blue="0.89472691969550333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="contentEdgeInsets" minX="7" minY="5" maxX="9" maxY="5"/>
@@ -651,8 +657,8 @@
         <image name="Score" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="yzl-VX-TLZ"/>
         <segue reference="5N3-CQ-cTc"/>
-        <segue reference="jVa-3J-kEr"/>
         <segue reference="j5V-ob-buJ"/>
         <segue reference="IdW-be-drC"/>
     </inferredMetricsTieBreakers>
