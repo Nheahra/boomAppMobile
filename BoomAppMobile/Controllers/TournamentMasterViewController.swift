@@ -52,7 +52,6 @@ extension TournamentMasterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Selected Tournament row: \(indexPath.row)")
         model.tournamentSelected(at: indexPath.row)
-        performSegue(withIdentifier: "TournamentDetailsSegue", sender: self)
     }
 }
 
