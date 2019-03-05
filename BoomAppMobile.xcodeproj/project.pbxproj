@@ -28,6 +28,8 @@
 		875EA35C21A479C5005D686E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA35B21A479C5005D686E /* ContainerViewController.swift */; };
 		875EA35E21A48BEF005D686E /* CenterViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA35D21A48BEF005D686E /* CenterViewControllerDelegate.swift */; };
 		875EA36221A49735005D686E /* TournamentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EA36121A49735005D686E /* TournamentCell.swift */; };
+		8783DF5522038B26007DA960 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8783DF5422038B26007DA960 /* EventsViewController.swift */; };
+		8783DF5722038BB5007DA960 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8783DF5622038BB5007DA960 /* Events.swift */; };
 		878B7CE421B5AB67001ACD98 /* TournamentMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B7CE321B5AB67001ACD98 /* TournamentMasterViewController.swift */; };
 		878B7CE621B5B633001ACD98 /* TournamentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B7CE521B5B633001ACD98 /* TournamentDetailsViewController.swift */; };
 		87AFE11E2190F18D0012AF30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AFE11D2190F18D0012AF30 /* AppDelegate.swift */; };
@@ -70,6 +72,8 @@
 		875EA35B21A479C5005D686E /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		875EA35D21A48BEF005D686E /* CenterViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewControllerDelegate.swift; sourceTree = "<group>"; };
 		875EA36121A49735005D686E /* TournamentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentCell.swift; sourceTree = "<group>"; };
+		8783DF5422038B26007DA960 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		8783DF5622038BB5007DA960 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		878B7CE321B5AB67001ACD98 /* TournamentMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentMasterViewController.swift; sourceTree = "<group>"; };
 		878B7CE521B5B633001ACD98 /* TournamentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentDetailsViewController.swift; sourceTree = "<group>"; };
 		87AFE11A2190F18D0012AF30 /* BoomAppMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomAppMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +127,7 @@
 				878B7CE521B5B633001ACD98 /* TournamentDetailsViewController.swift */,
 				8758E7A321B7307500D282B2 /* LoginViewController.swift */,
 				8758E7A521B735CB00D282B2 /* HomeViewController.swift */,
+				8783DF5422038B26007DA960 /* EventsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				875EA35521A476C4005D686E /* MenuOption.swift */,
 				875EA35721A477FE005D686E /* MenuCell.swift */,
 				875EA36121A49735005D686E /* TournamentCell.swift */,
+				8783DF5622038BB5007DA960 /* Events.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8783DF5722038BB5007DA960 /* Events.swift in Sources */,
 				875EA34221A328E9005D686E /* FlatFilePersistence.swift in Sources */,
 				875EA33D21A327C9005D686E /* SortSelection.swift in Sources */,
 				878B7CE421B5AB67001ACD98 /* TournamentMasterViewController.swift in Sources */,
@@ -324,6 +331,7 @@
 				875EA35821A477FE005D686E /* MenuCell.swift in Sources */,
 				875EA36221A49735005D686E /* TournamentCell.swift in Sources */,
 				875EA3332193B76D005D686E /* CenterViewController.swift in Sources */,
+				8783DF5522038B26007DA960 /* EventsViewController.swift in Sources */,
 				87AFE1202190F18D0012AF30 /* CreateTournamentViewController.swift in Sources */,
 				87AFE11E2190F18D0012AF30 /* AppDelegate.swift in Sources */,
 				8758E7A621B735CB00D282B2 /* HomeViewController.swift in Sources */,
