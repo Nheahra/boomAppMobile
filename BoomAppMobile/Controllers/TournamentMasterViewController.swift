@@ -20,6 +20,17 @@ class TournamentMasterViewController: UIViewController {
         tableView.delegate = self
         model.delegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tournamentViewController = segue.destination as? TournamentDetailsViewController
         else {

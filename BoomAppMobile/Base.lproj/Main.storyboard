@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="hHM-n8-6WH">
             <objects>
                 <viewController id="l8W-Ex-aEC" customClass="HomeViewController" customModule="BoomAppMobile" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,56 +26,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C52-UN-7lR">
-                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="NQe-ab-Wph"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="gPV-Ny-ZWy"/>
-                                    <barButtonItem title="Home" image="Home" landscapeImage="Home" largeContentSizeImage="Home" id="tpC-7A-amp"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="fTz-7Q-Yk9"/>
-                                    <barButtonItem title="Tournaments" image="Score" landscapeImage="Score" largeContentSizeImage="Score" id="baL-Kc-la3">
-                                        <connections>
-                                            <segue destination="BIU-Xy-ysM" kind="presentation" animates="NO" id="Anj-LX-J6l"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="mS2-kb-lTe"/>
-                                    <barButtonItem systemItem="add" id="fGQ-H2-HKd">
-                                        <connections>
-                                            <segue destination="76A-8T-gDj" kind="presentation" animates="NO" id="JGQ-Ql-8Dn"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Z5Z-b2-x7u"/>
-                                    <barButtonItem title="Logout" image="Logout" landscapeImage="Logout" largeContentSizeImage="Logout" id="Bly-rK-kgy">
-                                        <connections>
-                                            <segue destination="3EL-aY-SeY" kind="popoverPresentation" popoverAnchorBarButtonItem="Bly-rK-kgy" id="YBo-fL-pVq">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="LS2-TL-fTB"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="C52-UN-7lR" firstAttribute="trailing" secondItem="aCG-Wi-QjC" secondAttribute="trailing" id="OPn-pT-gU0"/>
-                            <constraint firstItem="C52-UN-7lR" firstAttribute="bottom" secondItem="aCG-Wi-QjC" secondAttribute="bottom" id="eOW-j3-lct"/>
                             <constraint firstItem="TPG-ob-W9Z" firstAttribute="top" secondItem="aCG-Wi-QjC" secondAttribute="top" constant="60" id="jjL-bT-Z71"/>
                             <constraint firstItem="aCG-Wi-QjC" firstAttribute="trailing" secondItem="TPG-ob-W9Z" secondAttribute="trailing" id="pY7-98-aRB"/>
                             <constraint firstItem="TPG-ob-W9Z" firstAttribute="leading" secondItem="aCG-Wi-QjC" secondAttribute="leading" id="r8E-EA-8tt"/>
-                            <constraint firstItem="C52-UN-7lR" firstAttribute="leading" secondItem="aCG-Wi-QjC" secondAttribute="leading" id="xq1-lQ-cHi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aCG-Wi-QjC"/>
                     </view>
-                    <connections>
-                        <outlet property="toolbar" destination="C52-UN-7lR" id="efS-Cf-Tjv"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home" id="We3-0h-4gp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Vy-D4-FEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252" y="-727"/>
+            <point key="canvasLocation" x="1191.2" y="-727.28635682158927"/>
         </scene>
         <!--Create Tournament View Controller-->
         <scene sceneID="9PZ-0G-lNI">
@@ -86,7 +50,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="NC3-tD-DVP">
-                                <rect key="frame" x="0.0" y="70" width="375" height="527"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="629"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZe-1v-yrf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="629"/>
@@ -237,31 +201,6 @@
                                     <constraint firstAttribute="bottom" secondItem="qZe-1v-yrf" secondAttribute="bottom" id="fT2-uG-Czu"/>
                                 </constraints>
                             </scrollView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Gt-0b-ZtI">
-                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="0rD-ZO-4id"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="X41-Gl-Bi3"/>
-                                    <barButtonItem title="Home" image="Home" landscapeImage="Home" largeContentSizeImage="Home" id="tta-D5-nce">
-                                        <connections>
-                                            <segue destination="l8W-Ex-aEC" kind="presentation" animates="NO" id="gYw-Hh-KHT"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Vl7-bO-uVf"/>
-                                    <barButtonItem title="Tournaments" image="Score" landscapeImage="Score" largeContentSizeImage="Score" id="zl3-gb-2uj"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="wqi-um-WQS"/>
-                                    <barButtonItem systemItem="add" id="RcL-se-b1v"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="8Yf-Pf-K7H"/>
-                                    <barButtonItem title="Logout" image="Logout" landscapeImage="Logout" largeContentSizeImage="Logout" id="2M7-hA-z25">
-                                        <connections>
-                                            <segue destination="3EL-aY-SeY" kind="show" id="GPo-t5-2RQ"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Al9-pj-T5W"/>
-                                </items>
-                            </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Tournament" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfU-Rc-nFX" userLabel="Add Tournament">
                                 <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <constraints>
@@ -274,20 +213,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8Gt-0b-ZtI" firstAttribute="leading" secondItem="O6x-g6-Ufi" secondAttribute="leading" id="4Ri-Vh-Gcc"/>
-                            <constraint firstItem="8Gt-0b-ZtI" firstAttribute="trailing" secondItem="O6x-g6-Ufi" secondAttribute="trailing" id="Apr-wY-CKo"/>
-                            <constraint firstItem="O6x-g6-Ufi" firstAttribute="bottom" secondItem="8Gt-0b-ZtI" secondAttribute="bottom" id="OKW-Om-04m"/>
-                            <constraint firstItem="8Gt-0b-ZtI" firstAttribute="width" secondItem="O6x-g6-Ufi" secondAttribute="width" id="SgI-0I-nig"/>
                             <constraint firstItem="NC3-tD-DVP" firstAttribute="leading" secondItem="O6x-g6-Ufi" secondAttribute="leading" id="Ta3-qU-AEl"/>
                             <constraint firstItem="NC3-tD-DVP" firstAttribute="trailing" secondItem="O6x-g6-Ufi" secondAttribute="trailing" id="gks-cz-Qck"/>
                             <constraint firstItem="hfU-Rc-nFX" firstAttribute="leading" secondItem="O6x-g6-Ufi" secondAttribute="leading" id="haO-LS-HVO"/>
-                            <constraint firstItem="8Gt-0b-ZtI" firstAttribute="top" secondItem="NC3-tD-DVP" secondAttribute="bottom" id="jcL-ph-Cv2"/>
                             <constraint firstItem="NC3-tD-DVP" firstAttribute="top" secondItem="hfU-Rc-nFX" secondAttribute="bottom" id="l74-0l-gyW"/>
                             <constraint firstItem="hfU-Rc-nFX" firstAttribute="top" secondItem="O6x-g6-Ufi" secondAttribute="top" id="mfu-fG-0gC"/>
                             <constraint firstItem="O6x-g6-Ufi" firstAttribute="trailing" secondItem="hfU-Rc-nFX" secondAttribute="trailing" id="pSG-Hg-G2w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O6x-g6-Ufi"/>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="ChQ-PI-V4t"/>
                     <connections>
                         <outlet property="rainDate" destination="JLf-0A-8FI" id="zXb-pD-t6R"/>
                         <outlet property="states" destination="eu5-BD-9JG" id="VBI-sH-2Gu"/>
@@ -299,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p31-sj-1BN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077.5999999999999" y="-727.28635682158927"/>
+            <point key="canvasLocation" x="1191" y="-1498"/>
         </scene>
         <!--Details-->
         <scene sceneID="eNl-o5-wA7">
@@ -310,10 +245,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="kdr-vw-tPE">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7L-XM-gia">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Zqq-OM-zPU">
                                                 <rect key="frame" x="67.5" y="0.0" width="240" height="180.5"/>
@@ -377,7 +312,7 @@
                                                         <rect key="frame" x="0.0" y="45" width="159" height="30"/>
                                                         <state key="normal" title="Score This Tournament"/>
                                                         <connections>
-                                                            <segue destination="C5x-QL-MJd" kind="showDetail" id="s3s-DP-Hgo"/>
+                                                            <segue destination="C5x-QL-MJd" kind="show" id="Rgv-eq-8E2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -426,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fjw-I7-Qls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566" y="920"/>
+            <point key="canvasLocation" x="2108" y="920"/>
         </scene>
         <!--Events-->
         <scene sceneID="W9B-8H-5MW">
@@ -469,13 +404,14 @@
                             <outlet property="delegate" destination="C5x-QL-MJd" id="mtv-eL-uEc"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="chk-p5-F7b"/>
                     <connections>
                         <outlet property="eventCollectionView" destination="CcK-Ul-tlK" id="aIC-dR-jmq"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2i-R7-5l3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2453.5999999999999" y="919.79010494752629"/>
+            <point key="canvasLocation" x="3065" y="920"/>
         </scene>
         <!--Accuracy Event View Controller-->
         <scene sceneID="C2r-1I-Rrr">
@@ -583,7 +519,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tDa-e5-hhU">
-                                <rect key="frame" x="0.0" y="64" width="375" height="533"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TournamentCell" rowHeight="81" id="Zji-7T-w58" customClass="TournamentCell" customModule="BoomAppMobile" customModuleProvider="target">
@@ -627,49 +563,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqy-W2-vb1">
-                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="RgD-I7-WY5"/>
-                                    <constraint firstAttribute="height" constant="70" id="ttI-iX-V2v"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="1aN-0E-iRu"/>
-                                    <barButtonItem title="Home" image="Home" landscapeImage="Home" largeContentSizeImage="Home" id="gpY-dF-eTT">
-                                        <connections>
-                                            <segue destination="l8W-Ex-aEC" kind="presentation" animates="NO" id="IdW-be-drC"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="8Eg-ws-4wd"/>
-                                    <barButtonItem title="Tournaments" image="Score" landscapeImage="Score" largeContentSizeImage="Score" id="whd-2n-FUS"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="OVw-4U-Z9c"/>
-                                    <barButtonItem systemItem="add" id="xBS-90-Y1e">
-                                        <connections>
-                                            <segue destination="76A-8T-gDj" kind="presentation" animates="NO" id="j5V-ob-buJ"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="4Fk-q8-Il8"/>
-                                    <barButtonItem title="Logout" image="Logout" landscapeImage="Logout" largeContentSizeImage="Logout" id="YVR-Cb-wTg">
-                                        <connections>
-                                            <segue destination="3EL-aY-SeY" kind="show" id="5N3-CQ-cTc"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="PH2-ah-YG2"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zqy-W2-vb1" firstAttribute="top" secondItem="tDa-e5-hhU" secondAttribute="bottom" id="0Nq-ov-Ypr"/>
-                            <constraint firstItem="zqy-W2-vb1" firstAttribute="leading" secondItem="byo-Sr-JQf" secondAttribute="leading" id="2jp-ut-eIX"/>
-                            <constraint firstItem="zqy-W2-vb1" firstAttribute="bottom" secondItem="byo-Sr-JQf" secondAttribute="bottom" id="DJO-49-AWq"/>
-                            <constraint firstItem="byo-Sr-JQf" firstAttribute="trailing" secondItem="tDa-e5-hhU" secondAttribute="trailing" id="Ilg-Ai-f7p"/>
-                            <constraint firstItem="tDa-e5-hhU" firstAttribute="top" secondItem="byo-Sr-JQf" secondAttribute="top" id="dbQ-82-HpX"/>
-                            <constraint firstItem="tDa-e5-hhU" firstAttribute="leading" secondItem="byo-Sr-JQf" secondAttribute="leading" id="hsy-cL-dpE"/>
-                            <constraint firstItem="zqy-W2-vb1" firstAttribute="trailing" secondItem="byo-Sr-JQf" secondAttribute="trailing" id="pg8-3t-ham"/>
+                            <constraint firstItem="tDa-e5-hhU" firstAttribute="top" secondItem="pFq-0g-PcL" secondAttribute="top" id="Ahc-JQ-Adc"/>
+                            <constraint firstItem="tDa-e5-hhU" firstAttribute="trailing" secondItem="byo-Sr-JQf" secondAttribute="trailing" id="b7F-ap-EY1"/>
+                            <constraint firstItem="byo-Sr-JQf" firstAttribute="bottom" secondItem="tDa-e5-hhU" secondAttribute="bottom" id="oTz-f4-Xsl"/>
+                            <constraint firstItem="tDa-e5-hhU" firstAttribute="leading" secondItem="byo-Sr-JQf" secondAttribute="leading" id="xoF-Tz-p53"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="byo-Sr-JQf"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="E1E-9L-dQK"/>
                     <navigationItem key="navigationItem" title="Tournaments" id="XbC-uE-Fdd" userLabel="Tournaments"/>
                     <connections>
                         <outlet property="tableView" destination="tDa-e5-hhU" id="1zt-AF-vBE"/>
@@ -679,17 +583,18 @@
             </objects>
             <point key="canvasLocation" x="2108" y="142.57871064467767"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Tournaments-->
         <scene sceneID="7J8-uL-rb0">
             <objects>
                 <splitViewController id="BIU-Xy-ysM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tournaments" image="Score" selectedImage="Score" id="7tH-HX-6iq"/>
                     <connections>
                         <segue destination="qW0-zf-M0k" kind="relationship" relationship="masterViewController" id="yzl-VX-TLZ"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hti-2O-KUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252" y="469"/>
+            <point key="canvasLocation" x="252" y="143"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="niw-Tb-EWp">
@@ -740,7 +645,7 @@
                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="l8W-Ex-aEC" kind="showDetail" id="O9t-dj-ULw"/>
+                                    <segue destination="0zv-Ty-hTD" kind="showDetail" id="O9t-dj-ULw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -770,6 +675,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oDv-3s-09w"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Logout" image="Logout" selectedImage="Logout" id="ltK-QO-VkL"/>
                     <connections>
                         <outlet property="email" destination="M4j-vz-g0S" id="7Sn-qe-sU8"/>
                         <outlet property="login" destination="beG-4k-E6d" id="dVA-XC-fRk"/>
@@ -796,7 +702,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2SS-Ci-0v2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078" y="143"/>
+            <point key="canvasLocation" x="1191" y="143"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cx3-Rd-S4I">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0zv-Ty-hTD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tT8-W1-GY2">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="l8W-Ex-aEC" kind="relationship" relationship="viewControllers" id="xYk-Fz-S6I"/>
+                        <segue destination="76A-8T-gDj" kind="relationship" relationship="viewControllers" id="uT6-yd-i4T"/>
+                        <segue destination="BIU-Xy-ysM" kind="relationship" relationship="viewControllers" id="FUG-R9-Fab"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uHw-4B-rfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252" y="-727.28635682158927"/>
         </scene>
     </scenes>
     <resources>
@@ -805,9 +730,4 @@
         <image name="Logout" width="30" height="30"/>
         <image name="Score" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="5N3-CQ-cTc"/>
-        <segue reference="j5V-ob-buJ"/>
-        <segue reference="IdW-be-drC"/>
-    </inferredMetricsTieBreakers>
 </document>
