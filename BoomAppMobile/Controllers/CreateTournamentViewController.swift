@@ -19,6 +19,8 @@ class CreateTournamentViewController: UIViewController {
     @IBOutlet weak var states: UIPickerView!
     
     var statesData: [String] = [String]()
+    private let model = TournamentModel()
+    private let connect = APIConnect()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,18 @@ class CreateTournamentViewController: UIViewController {
     override func didReceiveMemoryWarning() {
          super.didReceiveMemoryWarning()
     }
+    @IBAction func submitCreateTournament(_sender: UIButton) {
+        var tournament = Tournament.init(
+            id: 839203,
+            tournamentName: tournamentName.text ?? "",
+            locationName: "",
+            address: tournamentAddress.text ?? "",
+            city: tournamentCity.text ?? "",
+            state: statesData[states.selectedRow(inComponent: 0)],
+            startDate: tournamentStart.date,
+            rainDate: rainDate.date)
+    }
+    connect.createTournament(tournament: tournament)
 }
 
 extension CreateTournamentViewController: UIPickerViewDataSource {
@@ -46,5 +60,5 @@ extension CreateTournamentViewController: UIPickerViewDataSource {
 }
 
 extension CreateTournamentViewController: UIPickerViewDelegate {
-    
+
 }

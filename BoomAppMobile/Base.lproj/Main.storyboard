@@ -169,13 +169,16 @@
                                                             </datePicker>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Urs-hk-wrA">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Urs-hk-wrA" userLabel="buttonThinger">
                                                         <rect key="frame" x="0.0" y="596" width="335" height="33"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2A-lt-bDG">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="33"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <state key="normal" title="Done"/>
+                                                                <connections>
+                                                                    <action selector="submitCreateTournamentWith_sender:" destination="76A-8T-gDj" eventType="touchUpInside" id="k1t-zb-cyx"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -465,7 +468,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QvA-4P-W5j">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvA-4P-W5j">
                                 <rect key="frame" x="57.5" y="91" width="260" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g6-R7-cGz">
@@ -501,6 +504,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="QvA-4P-W5j" firstAttribute="top" secondItem="FOS-3V-mYu" secondAttribute="top" constant="71" id="KLN-wo-v7z"/>
                             <constraint firstItem="QvA-4P-W5j" firstAttribute="centerX" secondItem="NYR-cy-gI8" secondAttribute="centerX" id="YrI-6m-TTn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FOS-3V-mYu"/>

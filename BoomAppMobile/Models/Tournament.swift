@@ -9,7 +9,7 @@
 import Foundation
 
 struct Tournament: Codable {
-    let id: Int
+    let id: Int?
     let tournamentName: String
     let locationName: String
     let address: String
